@@ -378,21 +378,21 @@ form .row:first-child .floating-label-form-group {
   cursor: not-allowed;
 }
 ::-moz-selection {
-  color: gray;
+  color: #303030;
   text-shadow: none;
   background: #0085A1;
 }
 ::selection {
-  color: gray;
+  color: #303030;
   text-shadow: none;
   background: #0085A1;
 }
 img::selection {
-  color: gray;
+  color: #303030;
   background: transparent;
 }
 img::-moz-selection {
-  color: gray;
+  color: #303030;
   background: transparent;
 }
 body {
