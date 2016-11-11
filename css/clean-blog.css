@@ -43,7 +43,7 @@ hr.small {
   max-width: 100px;
   margin: 15px auto;
   border-width: 4px;
-  border-color: white;
+  border-color: black;
 }
 .navbar-custom {
   position: absolute;
@@ -74,7 +74,7 @@ hr.small {
     border-bottom: 1px solid transparent;
   }
   .navbar-custom .navbar-brand {
-    color: white;
+    color: black;
     padding: 20px;
   }
   .navbar-custom .navbar-brand:hover,
@@ -82,7 +82,7 @@ hr.small {
     color: rgba(255, 255, 255, 0.8);
   }
   .navbar-custom .nav li a {
-    color: white;
+    color: black;
     padding: 20px;
   }
   .navbar-custom .nav li a:hover,
@@ -205,7 +205,7 @@ hr.small {
   font-size: 20px;
 }
 .intro-header .post-heading .meta a {
-  color: white;
+  color: black;
 }
 @media only screen and (min-width: 768px) {
   .intro-header .post-heading h1 {
@@ -347,7 +347,7 @@ form .row:first-child .floating-label-form-group {
 .btn-default:focus {
   background-color: #0085A1;
   border: 1px solid #0085A1;
-  color: white;
+  color: black;
 }
 .pager {
   margin: 20px 0 0;
