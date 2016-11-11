@@ -79,7 +79,7 @@ hr.small {
   }
   .navbar-custom .navbar-brand:hover,
   .navbar-custom .navbar-brand:focus {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgb(169,169,169);
   }
   .navbar-custom .nav li a {
     color: black;
@@ -87,7 +87,7 @@ hr.small {
   }
   .navbar-custom .nav li a:hover,
   .navbar-custom .nav li a:focus {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgb(169,169,169);
   }
 }
 @media only screen and (min-width: 1170px) {
@@ -365,7 +365,7 @@ form .row:first-child .floating-label-form-group {
 }
 .pager li > a:hover,
 .pager li > a:focus {
-  color: white;
+  color: rgb(169,169,169);
   background-color: #0085A1;
   border: 1px solid #0085A1;
 }
