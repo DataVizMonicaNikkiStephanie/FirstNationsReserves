@@ -38,3 +38,23 @@ jQuery(document).ready(function($) {
             });
     }
 });
+//added JS pie chart information
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Settlement Status', 'Number of Square Kilometers'],
+          ['Pending Settlement',     151],
+          ['Current First Nations Land',      921.93],
+
+        ]);
+
+        var options = {
+          title: 'Potential Landloss for First Nations Communities in Quebec'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      };
