@@ -28,7 +28,38 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>    
+    <script type="text/javascript">      
+        google.charts.load('current', {'packages':['bar']});      
+        google.charts.setOnLoadCallback(drawStuff);      
+        
+        function drawStuff() {        
+        var data = new google.visualization.arrayToDataTable([          
+            ['Parks', 'Total Area'],          
+            ["National Parks", 257193],          
+            ["National Reserves", 59090],                   
+        ]);        
+            
+        var options = {          
+            title: 'National vs. Reserve Parks',          
+            width: 900,          
+            legend: { position: 'none' },          
+            chart: { title: 'National vs. Reserve Parks',                   
+            subtitle: 'Current Land Area' },          
+            bars: 'horizontal', // Required for Material Bar Charts.          
+            axes: {            
+            x: {              
+            0: { side: 'top', label: 'Percentage'} // Top x-axis.            
+                }          
+            },          
+            bar: { groupWidth: "90%" }        
+        };        
+            var chart = new google.charts.Bar(document.getElementById('top_x_div'));        
+            chart.draw(data, options);      
+        };    
+    </script>  
+    
 </head>
 
 <body>
@@ -78,7 +109,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <p> The land alotted to national parks versus that alotted to national reserves in Nova Scotia and Quebec is unbalanced.  As noted in the figure below, more than 80% of national land is dedicated to the national parks system, while less than 20% of the land in these provinces is granted to the First Nations community.</p>
-                <p> <div style='display: inline-block; width: 100%; min-height: 300px;'><div style='position: relative; padding-bottom: 100%; padding-top:25px; height: 0;'><iframe src="//park-vs-reserves.silk.co/s/embed/nOkxIZV" style="border:0;position: absolute; top:0; left:0; width: 100%;height:100%; min-height: 300px;"></iframe></div><div style='position:relative;margin-top:-33px;margin-bottom:10px;font-size:12px;color:gray;text-align:left;width:50%;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;'>Data from <a target='_blank' style='text-decoration:none;'href='http://park-vs-reserves.silk.co'>park-vs-reserves.silk.co</a></div></div> </p>
+                <div id="top_x_div" style="width: 900px; height: 500px;"></div>
             </div>
         </div>
     </div>
