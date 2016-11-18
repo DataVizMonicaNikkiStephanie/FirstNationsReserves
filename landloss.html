@@ -39,12 +39,11 @@
     function drawChart() {
       // Define the chart to be drawn.
       var data = new google.visualization.DataTable();
-      data.addColumn('string', 'Element');
-      data.addColumn('number', 'Percentage');
+      data.addColumn('string', 'Settlement Pattern');
+      data.addColumn('number', 'Number of km2');
       data.addRows([
-        ['Nitrogen', 0.78],
-        ['Oxygen', 0.21],
-        ['Other', 0.01]
+        ['Pending Settlement', 151],
+        ['Current First Nations Land', 921.93]
       ]);
 
       // Instantiate and draw the chart.
