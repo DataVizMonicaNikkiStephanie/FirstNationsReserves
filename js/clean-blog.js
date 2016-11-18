@@ -46,8 +46,8 @@ jQuery(document).ready(function($) {
 
         var data = google.visualization.arrayToDataTable([
           ['Settlement Status', 'Number of Square Kilometers'],
-          ['Pending Settlement',     151],
-          ['Current First Nations Land',      921.93],
+          ['Pending Settlement', 151],
+          ['Current First Nations Land', 921.93],
 
         ]);
 
