@@ -33,10 +33,14 @@
   <!--  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript">
+      // Load charts and the corechart package
     google.charts.load('current', {packages: ['corechart']});
-    google.charts.setOnLoadCallback(drawChart);
-
-    function drawChart() {
+      
+      // Drawing the two pie charts
+    google.charts.setOnLoadCallback(drawQuebecChart);
+    google.charts.setOnLoadCallback(drawNovaScotiaChart);
+ 
+    function drawQuebecChart() {
       // Define the chart to be drawn.
       var data = new google.visualization.DataTable();
       data.addColumn('string', 'Settlement Pattern');
@@ -54,6 +58,29 @@
       var chart = new google.visualization.PieChart(document.getElementById('myPieChart'));
       chart.draw(data, null);
     }
+      
+      // Callback that draws the pie chart for Nova Scotia
+      function drawNovaScotiaChart() {
+
+        // Create the data table for Nova Scotia
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Settlement Pattern');
+        data.addColumn('number', 'Number of km2');
+        data.addRows([
+          ['Current First Nations', 148.93],
+          ['Pending Settlement', 34]
+        ]);
+
+        // Set options for Nova Scotia
+        var options = {title:'Potential Land Loss for First Nations Communities in Nova Scotia',
+                       width:400,
+                       height:300};
+
+        // Instantiate and draw the chart for Nova Scotia
+        var chart = new google.visualization.PieChart(document.getElementById('Scotia'));
+        chart.draw(data, options);
+      }
+
   </script>
 
     
@@ -115,8 +142,9 @@
             <div id="myPieChart"/>   </div>
  
                     <h2> Nova Scotia </h2>
+                <div id="Scotia"/>   </div>
                      </div>
-          
+          </div>
         </div>
     </article>
 
